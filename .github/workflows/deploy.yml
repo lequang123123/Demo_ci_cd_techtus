@@ -12,6 +12,7 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: CLOUDFRONT_DISTRIBUTION_ID
 
     steps:
       - name: Checkout code

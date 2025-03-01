@@ -36,5 +36,8 @@ jobs:
       - name: Upload lên S3
         run: aws s3 sync ./build s3://s3demostaticweb222 --delete
 
+      - name: secret name
+        run: echo "My secret ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} variable"
+
       - name: Delete cache CloudFront
         run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"

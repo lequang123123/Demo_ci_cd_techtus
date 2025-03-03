@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
     return (
         <div>
-            <h1>Trang chủ</h1>
+            <h1>Trang chủ Quang run CI CD </h1>
             <Link to="/about">Đi đến About</Link>
         </div>
     );
